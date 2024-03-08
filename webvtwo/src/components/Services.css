@@ -1,0 +1,14 @@
+/* Services.css */
+.service-item {
+  position: relative;
+}
+
+.hover-effect {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff0000; /* Adjust color as needed */
+  border-radius: 50%;
+  display: none;
+  pointer-events: none; /* Ensure hover effect doesn't interfere with button clicks */
+}

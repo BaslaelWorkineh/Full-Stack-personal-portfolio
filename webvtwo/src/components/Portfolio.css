@@ -1,0 +1,69 @@
+.portfolio-item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .portfolio-item.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button-group button {
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.button-group button.active {
+  color: purple;
+}
+
+.button-group button.active::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: purple;
+  bottom: -2px;
+  left: 0;
+  transform-origin: left;
+  animation: moveIndicator 0.3s forwards;
+}
+
+@keyframes moveIndicator {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.portfolio-item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio-item {
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Add your other styles for portfolio items here */
