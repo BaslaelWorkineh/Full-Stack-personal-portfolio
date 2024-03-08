@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import profilepic from './assets/img/hero/user.png'
 import Odometer from 'odometer';
+import { FaInstagram, FaReddit, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 
 const HeroSection = () => {
@@ -23,7 +24,7 @@ const HeroSection = () => {
             <div className="intro_text">
                 <svg viewBox="0 0 1320 300">
                     <text x="50%" Y="50%" textAnchor="middle">
-                        HI
+                        BASLAEL
                     </text>
                 </svg>
             </div>
@@ -40,12 +41,12 @@ const HeroSection = () => {
 
                             <p className="lead">I specialize in crafting interactive software systems tailored to meet your unique needs, alongside developing dynamic and engaging websites that captivate your audience.</p>
                             <div className="button-box flex flex-wrap items-center">
-                                <a href="#" className="btn tj-btn-secondary">Download CV</a>
+                                <a href='https://drive.usercontent.google.com/uc?export=download&id=1iNJQtjSPqGtYWQfP0GxdHr8YW8HOam67' className="btn tj-btn-secondary">Download CV</a>
                                 <ul className="ul-reset social-icons">
-                                    <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fal fa-basketball"></i></a></li>
-                                    <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i className="fab fa-github"></i></a></li>
+                                    <li><a href="https://www.reddit.com/user/Same-Ad8290" target='_blank'><FaReddit /></a></li>
+                                    <li><a href="https://www.instagram.com/basketo_w/" target='_blank'><FaInstagram /></a></li>
+                                    <li><a href="https://www.linkedin.com/in/baslael-workineh-ayele-131b11248/" target='_blank'><FaLinkedinIn /></a></li>
+                                    <li><a href="https://github.com/BaslaelWorkineh" target='_blank'><FaGithub /></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -61,13 +62,13 @@ const HeroSection = () => {
                     <div className="flex flex-wrap">
                         <div className="w-full md:w-1/2 lg:w-1/4">
                             <div className="funfact-item flex flex-col md:flex-row items-center">
-                                <div className="number"><span className="odometer" data-count="14">3</span></div>
-                                <div className="text">Years of <br />Experience</div>
+                                <div className="number"><span className="odometer" data-count="14">500+</span></div>
+                                <div className="text">Linkedin <br />Connections</div>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/4">
                             <div className="funfact-item flex flex-col md:flex-row items-center">
-                                <div className="number"><span className="odometer" data-count="50">10</span>+</div>
+                                <div className="number"><span className="odometer" data-count="50">40</span>+</div>
                                 <div className="text">Project <br />Completed</div>
                             </div>
                         </div>

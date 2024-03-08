@@ -917,15 +917,15 @@ body.loaded {
     font-family: var(--tj-ff-russo);
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 110%;
     left: 46%;
-    top: 55%;
+    top: 75%;
     transform: translate(-50%, -50%) scale(1);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: -1;
-    animation: 3s pulsate infinite alternate ease-in-out;
+    animation: 5s pulsate infinite alternate ease-in-out;
 }
 
 .hero-section .intro_text svg text {
@@ -936,11 +936,11 @@ body.loaded {
     fill: transparent;
     font-size: 240px;
     display: inline-block;
-    opacity: 0;
+    opacity: 1;
 }
 
 .hero-section .intro_text svg text.animate-stroke {
-    animation: stroke 4s;
+    animation: stroke 6s;
     /* Adjust the duration as needed */
     opacity: 0.7;
 }
@@ -1322,6 +1322,7 @@ body.loaded {
 
 .portfolio-box {
     padding-top: 50px;
+    
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1367,7 +1368,11 @@ body.loaded {
 }
 
 .portfolio-box .image-box {
+    padding-bottom: 30px;
     text-align: center;
+}
+.portfolio-box img{
+    border-radius: 5px;
 }
 
 .portfolio-box .content-box {

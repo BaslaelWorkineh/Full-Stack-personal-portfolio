@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import portfolioImg1 from './assets/img/portfolio/1.jpg';
-import portfolioImg2 from './assets/img/portfolio/2.jpg';
-import portfolioImg3 from './assets/img/portfolio/3.jpg';
+import portfolioImg1 from './assets/img/portfolio/feres.png';
+import portfolioImg2 from './assets/img/portfolio/multiplayer.png';
+import portfolioImg3 from './assets/img/portfolio/cheapdelala.png';
 import portfolioImg4 from './assets/img/portfolio/4.jpg';
 import './Portfolio.css'
 import PortfolioPopup from '../components/PortfolioPopup';
@@ -26,14 +26,14 @@ const PortfolioSection = () => {
 
   // Define portfolio items with their categories
   const portfolioItems = [
-    { image: portfolioImg1, title: 'New Age', description: 'Project was about precision and information.', category: 'uxui' },
-    { image: portfolioImg2, title: 'Deloitte', description: 'Project was about precision and information.', category: 'branding' },
-    { image: portfolioImg3, title: 'Sebastian', description: 'Project was about precision and information.', category: 'mobile-app' },
-    { image: portfolioImg4, title: 'Mochnix', description: 'Project was about precision and information.', category: 'branding' },
-    { image: portfolioImg1, title: 'New Age', description: 'Project was about precision and information.', category: 'uxui' },
-    { image: portfolioImg2, title: 'Deloitte', description: 'Project was about precision and information.', category: 'branding' },
-    { image: portfolioImg3, title: 'Sebastian', description: 'Project was about precision and information.', category: 'mobile-app' },
-    { image: portfolioImg4, title: 'Mochnix', description: 'Project was about precision and information.', category: 'branding' }
+    { image: portfolioImg1, title: 'Feres Transportaion App(Clone) with React Native', description: 'In this project, I aimed to replicate every detail of Ethiopia\'s famous transportation app, Feres, using React Native. ', category: 'mobile-app' },
+    { image: portfolioImg2, title: 'Mobile Multiplayer TPS Starter Asset (Available on asset store for only 23.99$)', description: 'This starter asset provides essential mechanics like shooting, running, and jumping, alongside aim features, procedural recoil, weapon reloading, bot enemies, and a kill leaderboard', category: 'branding' },
+    { image: portfolioImg3, title: 'Cheap Delala(Java & Postgresql) also with MERN Stack', description: 'The House Rental and Sale System developed in Java and Postgresql (also with MERN STACK) is a comprehensive platform designed to provide a user-friendly experience for...', category: 'mobile-app' },
+    { image: portfolioImg1, title: 'Slash Dash(C# Unity and Photoshop) in One.5 day', description: 'The "2 Day Challenge" was an exhilarating game development endeavor that I embarked on independently. Within a tight timeframe, I successfully created a captivating 2D game using the Unity game engine and...', category: 'uxui' },
+    { image: portfolioImg4, title: 'Wild Life Simulation(Smart AI Animals)', description: 'In this captivating low-poly wildlife simulation, the enchanting world of nature comes to life as foxes and sheep roam freely in their natural habitat. With...', category: 'branding' },
+    { image: portfolioImg4, title: 'MERN Stack Blog', description: 'The MERN Stack Blog Portfolio project combines the power of the MERN (MongoDB, Express.js, React.js, Node.js) stack with the versatility of a personal portfolio. This project ...', category: 'branding' },
+    { image: portfolioImg2, title: 'Good Amharic Books', description: 'On Progress', category: 'branding' },
+    { image: portfolioImg3, title: 'Guzo Travel Package', description: 'On Progress', category: 'mobile-app' },
   ];
 
   // Filter portfolio items based on the selected category
@@ -46,7 +46,7 @@ const PortfolioSection = () => {
           <div className="col-md-12">
             <div className="section-header text-center">
               <h2 className="section-title wow fadeInUp" data-wow-delay=".3s">My Recent Works</h2>
-              <p className="wow fadeInUp" data-wow-delay=".4s">We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers.</p>
+              <p className="wow fadeInUp" data-wow-delay=".4s">This are some of the recent projects I have been working on Check'em out.</p>
             </div>
           </div>
         </div>

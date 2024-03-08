@@ -1,5 +1,5 @@
 import React from 'react';
-
+import logo from './assets/img/logo/logo.png'
 const ScrollUp = () => {
     return (
         <div className="progress-wrap" id="scrollUp">
@@ -19,13 +19,13 @@ const Header = ({ sticky }) => {
 
                         <div className="logo-box">
                             <a href="index.html">
-                                <img src="assets/img/logo/logo.png" alt="" />
+                                <img src={logo} alt="" />
                             </a>
                         </div>
 
                         <div className="header-info-list hidden md:inline-block">
                             <ul className="ul-reset">
-                                <li><a href="mailto:mail@gerolddesign.com">mail@gerolddesign.com</a></li>
+                                <li><a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSDbSVfbFxvcfHPTmTQhdGVGRLnlZxTbbdBDrVZWkZhPXqbHdqGcZBmbpQtpZkPKngPQnjnB" target='_blank'>baslaworku@gmail.com</a></li>
                             </ul>
                         </div>
 
@@ -43,7 +43,7 @@ const Header = ({ sticky }) => {
                         </div>
 
                         <div className="header-button">
-                            <a href="#" className="btn tj-btn-primary">Hire me!</a>
+                            <a href="https://www.linkedin.com/in/baslael-workineh-ayele-131b11248/" className="btn tj-btn-primary" target='_blank'>Hire me!</a>
                         </div>
 
                         <div className="menu-bar lg:hidden">

@@ -6,10 +6,12 @@ const ServicesSection = () => {
     const [activeService, setActiveService] = useState(null);
     
     const services = [
-        { number: '01', title: 'Branding Design', description: 'I break down complex user experience problems to create integrity-focused solutions that connect billions of people' },
-        { number: '02', title: 'Web Design', description: 'I break down complex user experience problems to create integrity-focused solutions that connect billions of people' },
-        { number: '03', title: 'UI/UX Design', description: 'I break down complex user experience problems to create integrity-focused solutions that connect billions of people' },
-        { number: '04', title: 'Graphics Design', description: 'I break down complex user experience problems to create integrity-focused solutions that connect billions of people' }
+        { number: '01', title: 'Web Development', description: 'I create custom digital solutions tailored to your business needs. From sleek designs to robust functionality, we leverage the latest technologies to ensure seamless user experiences across all platforms.' },
+        { number: '02', title: 'Mobile App Development', description: 'I provide innovative and user-friendly applications to help businesses thrive in the mobile market.' },
+        { number: '03', title: 'Debugging', description: 'In my Debugging service, I expertly identify and resolve software code issues to ensure seamless functionality. With a focus on efficiency and precision, I diagnose bugs of any complexity level.' },
+        { number: '04', title: 'Mentorship', description: 'Providing personalized guidance to help individuals navigate their professional and personal growth. Through tailored sessions and resources, as an experienced mentor, I empower mentees to achieve their goals, overcome challenges.' },
+        { number: '05', title: 'Game Development', description: 'As the sole developer, my Game Development service is dedicated to bringing your unique vision to life. From conceptualization to execution, I specialize in crafting captivating games across different platforms.' },
+        { number: '06', title: 'Low Poly 3D Design', description: 'In my Low Poly 3D Design service, I specialize in creating visually stunning designs with a minimalist aesthetic. Using optimized techniques, I craft captivating scenes ideal for games, animations, and virtual environments.' }
     ];
 
     const handleServiceClick = (index) => {
