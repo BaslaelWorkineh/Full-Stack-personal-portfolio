@@ -11,8 +11,8 @@ const TestimonialSection = () => {
         <div className="row">
           <div className="col-lg-5">
             <div className="section-header">
-              <h2 className="section-title wow fadeInLeft" data-wow-delay=".3s">My Client's Stories</h2>
-              <p className=" wow fadeInLeft" data-wow-delay=".4s" style={{textAlign:'justify'}}>Empowering people in new a digital journey with my super services Empowering people in new a digital journey with my super services Empowering people in new a digital journey with my super services Empowering people in new a digital journey with my super services Empowering people in new a digital journey with my super services Empowering people in new a digital journey with my super services Empowering people in new a digital journey with my super servicesEmpowering people in new a digital journey with my super servicesEmpowering people in new a digital journey with my super services Empowering people in new a digital journey with my super services Empowering people in new a digital journey with my super services Empowering people in new a digital journey with my super services</p>
+              <h2 className="section-title wow fadeInLeft" data-wow-delay=".3s">What do people say about me?</h2>
+              <p className=" wow fadeInLeft" data-wow-delay=".4s" style={{textAlign:'justify'}}>These are the testimonies of some of the individuals whom I've had the privilege to meet along my journey.</p>
             </div>
           </div>
 

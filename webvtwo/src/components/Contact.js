@@ -13,7 +13,7 @@ const ContactSection = () => {
             <div className="contact-form-box wow fadeInLeft" data-wow-delay=".3s">
               <div className="section-header">
                 <h2 className="section-title">Let’s work together!</h2>
-                <p>I design and code beautifully simple things and I love what I do. Just simple like that!</p>
+                <p>I love Programming so why don't you give me that job. Just text/call me.</p>
               </div>
 
               <div className="tj-contact-form">
@@ -78,7 +78,7 @@ const ContactSection = () => {
                   </div>
                   <div className="text-box">
                     <p>Phone</p>
-                    <a href="tel:0123456789">+01 123 654 8096</a>
+                    <a href="tel:0123456789">+251-985316396</a>
                   </div>
                 </li>
 
@@ -89,7 +89,7 @@ const ContactSection = () => {
                   </div>
                   <div className="text-box">
                     <p>Email</p>
-                    <a href="mailto:mail@mail.com">gerolddesign@mail.com</a>
+                    <a href="mailto:mail@mail.com">baslaworku@gmail.com</a>
                   </div>
                 </li>
 
@@ -100,7 +100,7 @@ const ContactSection = () => {
                   </div>
                   <div className="text-box">
                     <p>Address</p>
-                    <a href="#">Warne Park Street Pine, <br />FL 33157, New York</a>
+                    <a href="#">Mekanisa, <br />Addis Ababa, Ethiopia</a>
                   </div>
                 </li>
               </ul>
