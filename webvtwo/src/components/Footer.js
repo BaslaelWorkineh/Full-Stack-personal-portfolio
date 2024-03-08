@@ -25,7 +25,7 @@ const Footer = () => {
               </nav>
             </div>
             <div className="copy-text">
-              <p>&copy; 2024 All rights reserved by <a href="#" target="_blank" rel="noopener noreferrer">ThemeJunction</a></p>
+              <p>&copy; 2024 All rights reserved by <a href="#" target="_blank" rel="noopener noreferrer">Baslael Workineh</a></p>
             </div>
           </div>
         </div>

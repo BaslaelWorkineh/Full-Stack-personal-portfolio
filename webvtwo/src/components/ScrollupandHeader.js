@@ -1,5 +1,6 @@
-import React from 'react';
-import logo from './assets/img/logo/logo.png'
+import React, { useState } from 'react';
+import logo from './assets/img/logo/logo.png';
+
 const ScrollUp = () => {
     return (
         <div className="progress-wrap" id="scrollUp">
@@ -11,6 +12,12 @@ const ScrollUp = () => {
 };
 
 const Header = ({ sticky }) => {
+    const [menuOpened, setMenuOpened] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpened(!menuOpened);
+    };
+
     return (
         <header className={`tj-header-area header-absolute ${sticky && 'sticky-out'}`}>
             <div className="container">
@@ -23,13 +30,13 @@ const Header = ({ sticky }) => {
                             </a>
                         </div>
 
-                        <div className="header-info-list hidden md:inline-block">
+                        <div className={`header-info-list hidden md:inline-block ${menuOpened ? 'opened' : ''}`}>
                             <ul className="ul-reset">
                                 <li><a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSDbSVfbFxvcfHPTmTQhdGVGRLnlZxTbbdBDrVZWkZhPXqbHdqGcZBmbpQtpZkPKngPQnjnB" target='_blank'>baslaworku@gmail.com</a></li>
                             </ul>
                         </div>
 
-                        <div className="header-menu">
+                        <div className={`header-menu ${menuOpened ? 'opened' : ''}`}>
                             <nav>
                                 <ul>
                                     <li><a href="#services-section">Services</a></li>
@@ -46,7 +53,7 @@ const Header = ({ sticky }) => {
                             <a href="https://www.linkedin.com/in/baslael-workineh-ayele-131b11248/" className="btn tj-btn-primary" target='_blank'>Hire me!</a>
                         </div>
 
-                        <div className="menu-bar lg:hidden">
+                        <div className="menu-bar lg:hidden" onClick={toggleMenu}>
                             <button>
                                 <span></span>
                                 <span></span>
