@@ -3,7 +3,7 @@ import Model from 'react-modal';
 
 const PortfolioPopup = ({ visible, onClose, projectData }) => {
   // Check if projectData exists before attempting to destructure its properties
-  const { title, description, category, client, startDate, designer, images, github, youtube } = projectData || {};
+  const { title, description, category, client, startDate, Programmer, images, github, youtube } = projectData || {};
   const copyToClipboard = () => {
     // Check if the GitHub link is available
     if (github) {
@@ -77,7 +77,7 @@ const PortfolioPopup = ({ visible, onClose, projectData }) => {
               <div className="info_item">
                 <div className="key">Programmer</div>
                 {/* Use default designer if projectData is undefined */}
-                <div className="value"><a href="#">{designer || 'Default Programmer'}</a></div>
+                <div className="value"><a href="#">{Programmer || 'Default Programmer'}</a></div>
               </div>
             </div>
 
