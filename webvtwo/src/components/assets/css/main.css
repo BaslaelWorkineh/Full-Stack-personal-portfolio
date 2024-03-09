@@ -1559,18 +1559,18 @@ body.loaded {
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
-
 .popup_modal_img {
-    padding: 50px 40px 0 40px;
+    padding: 5px 40px 10px 40px;
     text-align: center;
     max-height: 670px;
     overflow: hidden;
 }
 
 .popup_modal_img img {
-    height: 100%;
+    width: 100%; /* Set image width to 100% to ensure it fills its container */
     -o-object-fit: cover;
     object-fit: cover;
+    padding: 0px 40px 10px 40px;
 }
 
 .popup_modal_content {
