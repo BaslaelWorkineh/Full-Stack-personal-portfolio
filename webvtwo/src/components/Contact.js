@@ -42,15 +42,15 @@ const ContactSection = () => {
                     </div>
                     <div className="col-12">
                       <div className="form_group">
-                        <select>
+                        <select name="conService" id="conService" className="tj-nice-select">
                           <option value="" selected disabled>Choose Service</option>
                           <option value="braning">Mobile App Development</option>
                           <option value="web">Web Development</option>
-                          <option value="uxui">Game Development</option>
-                          <option value="app">System Design</option>
-                          <option value="app">Mentorship</option>
-                          <option value="app">Debugging</option>
-                          <option value="app">3D model Design</option>
+                          <option value="game">Game Development</option>
+                          <option value="system">System Design</option>
+                          <option value="mentorship">Mentorship</option>
+                          <option value="debugging">Debugging</option>
+                          <option value="3d models">3D model Design</option>
                         </select>
                       </div>
                     </div>
