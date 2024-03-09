@@ -4,10 +4,26 @@ import Model from 'react-modal';
 const PortfolioPopup = ({ visible, onClose, projectData }) => {
   // Check if projectData exists before attempting to destructure its properties
   const { title, description, category, client, startDate, designer, images, github, ytlink } = projectData || {};
-
+  const copyToClipboard = () => {
+    // Check if the GitHub link is available
+    if (github) {
+      // Copy GitHub link to clipboard
+      navigator.clipboard.writeText(github)
+        .then(() => {
+          // Alert when the link is copied successfully
+          alert('GitHub link copied to clipboard!');
+        })
+        .catch((error) => {
+          console.error('Failed to copy GitHub link: ', error);
+        });
+    } else {
+      // Alert if GitHub link is not available
+      alert('GitHub link not available!');
+    }
+  };
   return (
     <Model isOpen={visible} id="portfolio-wrapper" className="popup_content_area zoom-anim-dialog" style={{ overlay: { background: 'rgba(106, 69, 255, 0.456)', zIndex: 9999, overflowY: 'scroll' } }}>
-      <button className="close-btn" onClick={onClose} style={{ background: 'black', padding: 20,position:'absolute'}}>
+      <button className="close-btn" onClick={onClose} style={{ background: 'black', padding: 15, position: 'absolute', color: "white", borderWidth: 2, borderColor: 'white' }}>
         Close
       </button>
       <div className="popup_modal_img">
@@ -24,7 +40,20 @@ const PortfolioPopup = ({ visible, onClose, projectData }) => {
               {/* Use default description if projectData is undefined */}
               <p style={{ textAlign: 'justify' }}>{description || 'Default Description'}</p>
             </div>
-            <a href={ytlink} className="btn tj-btn-primary" target='_blank'>Youtube Video <i className="fal fa-arrow-right"></i></a>
+            {/* Display GitHub link */}
+            <p style={{color:'black', paddingTop:10, fontWeight:900, textDecoration:'underline', fontSize:20, fontFamily:'Arial'}}>Do you want the project?</p>
+            <p style={{color:'gray'}}> (1) Open Git Bash.</p>
+            <p style={{color:'gray'}}>
+              (2) Change the current working directory to the location where you want the cloned directory.</p>
+            <p style={{color:'gray'}}>(3) Type git clone, and then paste the URL you copied earlier.</p>
+            {github && (
+              <div>
+                <input value={github} readOnly style={{ color: 'black', width: '80%', background: 'lightgray', padding: 10, borderTopLeftRadius: 10, borderBottomLeftRadius: 10 }} />
+                {/* Button to copy GitHub link to clipboard */}
+                <button className="button" onClick={copyToClipboard} style={{ background: 'black', padding: 10, borderTopRightRadius: 10, borderBottomRightRadius: 10 }}>Copy</button>
+              </div>
+            )}
+            <a href={ytlink} className="btn tj-btn-primary" target='_blank'>Youtube Video</a>
           </div>
 
 

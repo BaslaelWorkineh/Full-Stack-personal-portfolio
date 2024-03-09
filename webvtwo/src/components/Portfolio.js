@@ -44,8 +44,8 @@ const PortfolioSection = () => {
       startDate: '2022-01-01',
       designer: 'Your Name',
       images: [feresImage],
-      github: '',
-      youtube:''
+      github: 'https://github.com/BaslaelWorkineh/Feres-Clone.git',
+      youtube:'https://www.youtube.com/channel/UC41TiP_i_Nxi6SgY0ogAAUA'
     },
     {
       title: 'Mobile Multiplayer TPS Starter Asset (Available on asset store for only 23.99$)',
@@ -55,8 +55,8 @@ const PortfolioSection = () => {
       startDate: '2022-02-01',
       designer: 'Your Name',
       images: [multiplayerImage],
-      github: '',
-      youtube:''
+      github: 'No Repo Available for this project',
+      youtube:'https://www.youtube.com/watch?v=ZVfKeEiKNo0'
     },
     {
       title: 'Cheap Delala(Java & Postgresql) also with MERN Stack',
@@ -66,8 +66,8 @@ const PortfolioSection = () => {
       startDate: '2022-03-01',
       designer: 'Your Name',
       images: [cheapdelalaImage],
-      github: '',
-      youtube:''
+      github: 'https://github.com/BaslaelWorkineh/Cheap-Delala-V2.git',
+      youtube:'https://www.youtube.com/watch?v=FdykG87GDKg&t=2s'
     },
     {
       title: 'Slash Dash(C# Unity and Photoshop) in One.5 day',
@@ -77,8 +77,8 @@ const PortfolioSection = () => {
       startDate: '2022-04-01',
       designer: 'Your Name',
       images: [slashdashgameImage],
-      github: '',
-      youtube:''
+      github: 'https://github.com/BaslaelWorkineh/Slash-Dash_source-code-MyGame.git',
+      youtube:'https://www.youtube.com/watch?v=ImljRwyB-_M'
     },
     {
       title: 'Wild Life Simulation(Smart AI Animals)',
@@ -88,8 +88,8 @@ const PortfolioSection = () => {
       startDate: '2022-05-01',
       designer: 'Your Name',
       images: [wildlifeImage],
-      github: '',
-      youtube:''
+      github: 'No Repo Available for this project',
+      youtube:'https://www.youtube.com/watch?v=lFQmcj_tWio'
     },
     {
       title: 'MERN Stack Blog',
@@ -99,8 +99,8 @@ const PortfolioSection = () => {
       startDate: '2022-06-01',
       designer: 'Your Name',
       images: [blogcodeImage],
-      github: '',
-      youtube:''
+      github: 'https://github.com/BaslaelWorkineh/MERN-STACK-Portfolio.git',
+      youtube:'https://www.youtube.com/channel/UC41TiP_i_Nxi6SgY0ogAAUA'
     },
     {
       title: 'Motorbike Physics Using c# and Unity',
@@ -110,8 +110,8 @@ const PortfolioSection = () => {
       startDate: '2022-07-01',
       designer: 'Your Name',
       images: [motorImge],
-      github: '',
-      youtube:''
+      github: 'https://github.com/BaslaelWorkineh/Unity-3d-Motorbike-Controller.git',
+      youtube:'https://www.youtube.com/watch?v=sYftUpn_LZY'
     },
     {
       title: 'Good Amharic Books',
@@ -121,8 +121,8 @@ const PortfolioSection = () => {
       startDate: '2022-08-01',
       designer: 'Your Name',
       images: [goodamharicImage],
-      github: '',
-      youtube:''
+      github: 'https://github.com/eyuuab/good_amharic_book.git',
+      youtube:'https://www.youtube.com/channel/UC41TiP_i_Nxi6SgY0ogAAUA'
     },
     {
       title: 'Guzo Travel Package',
@@ -132,8 +132,8 @@ const PortfolioSection = () => {
       startDate: '2022-09-01',
       designer: 'Your Name',
       images: [blogcodeImage] ,
-      github: '',
-      youtube:''
+      github: 'https://github.com/BaslaelWorkineh/GUZO.git',
+      youtube:'https://www.youtube.com/channel/UC41TiP_i_Nxi6SgY0ogAAUA'
     }
   ];
   
