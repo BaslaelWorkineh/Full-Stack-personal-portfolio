@@ -3,7 +3,7 @@ import Model from 'react-modal';
 
 const PortfolioPopup = ({ visible, onClose, projectData }) => {
   // Check if projectData exists before attempting to destructure its properties
-  const { title, description, category, client, startDate, designer, images, github, ytlink } = projectData || {};
+  const { title, description, category, client, startDate, designer, images, github, youtube } = projectData || {};
   const copyToClipboard = () => {
     // Check if the GitHub link is available
     if (github) {
@@ -53,7 +53,7 @@ const PortfolioPopup = ({ visible, onClose, projectData }) => {
                 <button className="button" onClick={copyToClipboard} style={{ background: 'black', padding: 10, borderTopRightRadius: 10, borderBottomRightRadius: 10 }}>Copy</button>
               </div>
             )}
-            <a href={ytlink} className="btn tj-btn-primary" target='_blank'>Youtube Video</a>
+            <a href={youtube} className="btn tj-btn-primary" target='_blank'>Youtube Video</a>
           </div>
 
 

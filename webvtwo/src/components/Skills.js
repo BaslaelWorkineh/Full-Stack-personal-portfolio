@@ -24,7 +24,9 @@ import reduxIcon from './assets/img/icons/redux.svg';
 import nodeIcon from './assets/img/icons/nodejs.svg'
 import tailwindIcon from './assets/img/icons/tailwind.svg'
 import typescriptIcon from './assets/img/icons/typescript.svg'
-
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 
 const SkillsSection = () => {
@@ -59,6 +61,36 @@ const SkillsSection = () => {
 ];
 
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  };
+
   return (
     <section className="skills-section" id="skills-section">
       <div className="container">
@@ -73,25 +105,24 @@ const SkillsSection = () => {
 
         <div className="row">
           <div className="col-md-12">
-            <div className="skills-widget d-flex flex-wrap justify-content-center align-items-center">
-              {/* Mapping over the skills array to render each skill item */}
+            <Slider {...settings}>
               {skills.map((skill, index) => (
-                <div key={index} className="skill-item wow fadeInUp" data-wow-delay={`.${index + 3}s`}>
-                  <div className="skill-inner">
+                <div key={index} className="skill-item wow fadeInUp" data-wow-delay={`.${index + 3}s`} >
+                  <div className="skill-inner" style={{height:200,justifyContent:'center', marginLeft:20, marginRight:20,zIndex:1}}>
                     <div className="icon-box">
-                      <img src={skill.icon} alt="" style={{width:100}}/>
+                      <img src={skill.icon} alt="" style={{ width: 60 }} />
                     </div>
-                    <div className="number">{skill.percentage}%</div>
+                    <div style={{paddingTop:20, fontSize:20}} className="number">{skill.percentage}%</div>
                   </div>
-                  <p>{skill.name}</p>
+                  <p style={{fontFamily:'"Sora", sans-serif',marginTop:20,display:'flex', flexDirection:'column',fontSize:20, alignItems:'center', justifyContent:'center',color:'#8750f7', marginLeft:20, marginRight:20,}}>{skill.name}</p>
                 </div>
               ))}
-            </div>
+            </Slider>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default SkillsSection;
