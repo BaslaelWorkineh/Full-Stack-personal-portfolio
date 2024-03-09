@@ -1,25 +1,22 @@
 import React from 'react';
-import blog1Image from './assets/img/blog/1.jpg';
-import blog2Image from './assets/img/blog/2.jpg';
-import blog3Image from './assets/img/blog/3.jpg';
 
 const blogItems = [
   { 
-    image: blog1Image,
+    image: "https://cdn4.vectorstock.com/i/1000x1000/04/08/bitcoin-digital-currency-symbol-violet-vector-25460408.jpg",
     category: 'Crypto',
     date: 'Oct 01, 2022',
     title: 'BitCoin\'s All Time High',
     comments: 0,
   },
   { 
-    image: blog2Image,
+    image: "https://riseuplabs.com/wp-content/uploads/2021/07/mobile-application-development-guidelines-riseuplabs.jpg",
     category: 'TIPS',
     date: 'Nov 01, 2022',
     title: 'App Development Guides',
     comments: 0,
   },
   { 
-    image: blog3Image,
+    image: "https://i0.wp.com/iemgroup.s3.amazonaws.com/uploads/sites/7/2022/11/Benefits-Of-studying-Computer-Science.jpg?resize=800%2C445&ssl=1",
     category: 'FREEBIES',
     date: 'Dec 01, 2022',
     title: 'Learn Computer Science at home',
@@ -45,7 +42,7 @@ const BlogSection = () => {
               <div className="blog-item wow fadeInUp" data-wow-delay={0.5 + index * 0.1 + 's'}>
                 <div className="blog-thumb">
                   <a href="blog-details.html">
-                    <img src={item.image} alt="" />
+                    <img src={item.image} alt="" style={{height:300}}/>
                   </a>
                   <a href="#" className="category">{item.category}</a>
                 </div>

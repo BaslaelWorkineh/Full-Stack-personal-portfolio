@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { ScrollUp, Header } from '../components/ScrollupandHeader';
+import { Header } from '../components/ScrollupandHeader';
 import HeroSection from '../components/Hero';
 import ServicesSection from '../components/Services'; // Correct import
 import PortfolioSection from '../components/Portfolio';
@@ -27,7 +27,6 @@ function Home() {
     
   return (
     <div>
-      <ScrollUp />
       <Header sticky={false} />
       <Header sticky={true} />
       <HeroSection />
