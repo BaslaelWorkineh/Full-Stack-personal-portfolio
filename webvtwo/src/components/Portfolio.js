@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import portfolioImg1 from './assets/img/portfolio/feres.png';
-import portfolioImg2 from './assets/img/portfolio/multiplayer.png';
-import portfolioImg3 from './assets/img/portfolio/cheapdelala.png';
-import portfolioImg4 from './assets/img/portfolio/4.jpg';
+import feresImage from './assets/img/portfolio/feres.png';
+import multiplayerImage from './assets/img/portfolio/multiplayer.png';
+import cheapdelalaImage from './assets/img/portfolio/cheapdelala.png';
+import slashdashgameImage from './assets/img/portfolio/slashdashgame.png';
+import motorImge from './assets/img/portfolio/motor.png';
+import wildlifeImage from './assets/img/portfolio/wildlife.png';
+import blogcodeImage from './assets/img/portfolio/blogcode.png';
+import goodamharicImage from './assets/img/portfolio/goodamharic.png';
 import './Portfolio.css'
 import PortfolioPopup from '../components/PortfolioPopup';
 import Modal from 'react-modal'
@@ -26,14 +30,15 @@ const PortfolioSection = () => {
 
   // Define portfolio items with their categories
   const portfolioItems = [
-    { image: portfolioImg1, title: 'Feres Transportaion App(Clone) with React Native', description: 'In this project, I aimed to replicate every detail of Ethiopia\'s famous transportation app, Feres, using React Native. ', category: 'mobile-app' },
-    { image: portfolioImg2, title: 'Mobile Multiplayer TPS Starter Asset (Available on asset store for only 23.99$)', description: 'This starter asset provides essential mechanics like shooting, running, and jumping, alongside aim features, procedural recoil, weapon reloading, bot enemies, and a kill leaderboard', category: 'branding' },
-    { image: portfolioImg3, title: 'Cheap Delala(Java & Postgresql) also with MERN Stack', description: 'The House Rental and Sale System developed in Java and Postgresql (also with MERN STACK) is a comprehensive platform designed to provide a user-friendly experience for...', category: 'mobile-app' },
-    { image: portfolioImg1, title: 'Slash Dash(C# Unity and Photoshop) in One.5 day', description: 'The "2 Day Challenge" was an exhilarating game development endeavor that I embarked on independently. Within a tight timeframe, I successfully created a captivating 2D game using the Unity game engine and...', category: 'uxui' },
-    { image: portfolioImg4, title: 'Wild Life Simulation(Smart AI Animals)', description: 'In this captivating low-poly wildlife simulation, the enchanting world of nature comes to life as foxes and sheep roam freely in their natural habitat. With...', category: 'branding' },
-    { image: portfolioImg4, title: 'MERN Stack Blog', description: 'The MERN Stack Blog Portfolio project combines the power of the MERN (MongoDB, Express.js, React.js, Node.js) stack with the versatility of a personal portfolio. This project ...', category: 'branding' },
-    { image: portfolioImg2, title: 'Good Amharic Books', description: 'On Progress', category: 'branding' },
-    { image: portfolioImg3, title: 'Guzo Travel Package', description: 'On Progress', category: 'mobile-app' },
+    { image: feresImage, title: 'Feres Transportaion App(Clone) with React Native', description: 'In this project, I aimed to replicate every detail of Ethiopia\'s famous transportation app, Feres, using React Native. ', category: 'mobile-app' },
+    { image: multiplayerImage, title: 'Mobile Multiplayer TPS Starter Asset (Available on asset store for only 23.99$)', description: 'This starter asset provides essential mechanics like shooting, running, and jumping, alongside aim features, procedural recoil, weapon reloading, bot enemies, and a kill leaderboard', category: 'games' },
+    { image: cheapdelalaImage, title: 'Cheap Delala(Java & Postgresql) also with MERN Stack', description: 'The House Rental and Sale System developed in Java and Postgresql (also with MERN STACK) is a comprehensive platform designed to provide a user-friendly experience for...', category: 'mobile-app' },
+    { image: slashdashgameImage, title: 'Slash Dash(C# Unity and Photoshop) in One.5 day', description: 'The "2 Day Challenge" was an exhilarating game development endeavor that I embarked on independently. Within a tight timeframe, I successfully created a captivating 2D game using the Unity game engine and...', category: 'games' },
+    { image: wildlifeImage, title: 'Wild Life Simulation(Smart AI Animals)', description: 'In this captivating low-poly wildlife simulation, the enchanting world of nature comes to life as foxes and sheep roam freely in their natural habitat. With...', category: 'algo' },
+    { image: blogcodeImage, title: 'MERN Stack Blog', description: 'The MERN Stack Blog Portfolio project combines the power of the MERN (MongoDB, Express.js, React.js, Node.js) stack with the versatility of a personal portfolio. This project ...', category: 'web' },
+    { image: motorImge, title: 'Motorbike Physics Using c# and Unity', description: 'The motorbike controller, crafted using C# programming language and Blender, is a sophisticated device engineered to elevate the riding experience for motorcycle enthu...', category: 'algo' },
+    { image: goodamharicImage, title: 'Good Amharic Books', description: 'On Progress', category: 'web' },
+    { image: blogcodeImage, title: 'Guzo Travel Package', description: 'On Progress', category: 'web' },
   ];
 
   // Filter portfolio items based on the selected category
@@ -56,9 +61,10 @@ const PortfolioSection = () => {
             <div className="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
               <div className="button-group filter-button-group">
                 <button onClick={() => handleFilterClick('*')} className={activeButton === '*' ? 'active' : ''}>All</button>
-                <button onClick={() => handleFilterClick('uxui')} className={activeButton === 'uxui' ? 'active' : ''}>UX/UI</button>
-                <button onClick={() => handleFilterClick('branding')} className={activeButton === 'branding' ? 'active' : ''}>Branding</button>
+                <button onClick={() => handleFilterClick('web')} className={activeButton === 'web' ? 'active' : ''}>Websites</button>
                 <button onClick={() => handleFilterClick('mobile-app')} className={activeButton === 'mobile-app' ? 'active' : ''}>Apps</button>
+                <button onClick={() => handleFilterClick('games')} className={activeButton === 'games' ? 'active' : ''}>Games</button>
+                <button onClick={() => handleFilterClick('algo')} className={activeButton === 'algo' ? 'active' : ''}>Algorithms</button>
               </div>
             </div>
 
