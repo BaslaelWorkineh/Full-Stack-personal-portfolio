@@ -4,22 +4,22 @@ const blogItems = [
   { 
     image: "https://cdn4.vectorstock.com/i/1000x1000/04/08/bitcoin-digital-currency-symbol-violet-vector-25460408.jpg",
     category: 'Crypto',
-    date: 'Oct 01, 2022',
+    date: 'Mar 03, 2024',
     title: 'BitCoin\'s All Time High',
     comments: 0,
   },
   { 
     image: "https://riseuplabs.com/wp-content/uploads/2021/07/mobile-application-development-guidelines-riseuplabs.jpg",
     category: 'TIPS',
-    date: 'Nov 01, 2022',
+    date: 'Jan 04, 2024',
     title: 'App Development Guides',
     comments: 0,
   },
   { 
     image: "https://i0.wp.com/iemgroup.s3.amazonaws.com/uploads/sites/7/2022/11/Benefits-Of-studying-Computer-Science.jpg?resize=800%2C445&ssl=1",
     category: 'FREEBIES',
-    date: 'Dec 01, 2022',
-    title: 'Learn Computer Science at home',
+    date: 'Mar 09, 2024',
+    title: 'Learn CS at home',
     comments: 0,
   }
 ];
