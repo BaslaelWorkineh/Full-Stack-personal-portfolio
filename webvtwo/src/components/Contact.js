@@ -7,6 +7,14 @@ import ContactModalFail from './ContactModalFail';
 import ContactModalSuccess from './ContactModalSuccess';
 
 const ContactSection = () => {
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showFailModal, setShowFailModal] = useState(false);
+  const [isVisible, setIsVisible] = useState()
+  onclick = ()=>{
+    setIsVisible(true);
+  }
+
+
 
   const [formData, setFormData] = useState({
     fname:'',
@@ -21,8 +29,8 @@ const ContactSection = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async () => {
-    
+  const handleSubmit = async (e) => {
+    e.preventDefault(); 
     console.log(formData);
     
     try {
@@ -34,6 +42,7 @@ const ContactSection = () => {
 
       // Check if response is not successful
       if (response.status !== 200) {
+        setShowFailModal(true);
         console.log('error happened')
         const failMessage = document.querySelector('#message_fail');
         failMessage.style.display = 'block';
@@ -41,6 +50,7 @@ const ContactSection = () => {
       }
       else
       {
+        setShowSuccessModal(true);
         console.log('succesfuly')
         const successMsg = document.querySelectorAll('#message_sent');
         successMsg.style.display = 'block';
@@ -56,6 +66,7 @@ const ContactSection = () => {
         message:'',
       });
     } catch (error) {
+      setShowFailModal(true);
       console.error('Error submitting form:', error);
     }
   };
@@ -168,9 +179,9 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-      <button onClick={handleSubmit}>submit</button>
-      <ContactModalFail/>
-      <ContactModalSuccess/>
+      {/* Success and Fail Modals */}
+      {showSuccessModal && <ContactModalSuccess />}
+      {showFailModal && <ContactModalFail isVisible={isVisible} />}
     </section>
   );
 };

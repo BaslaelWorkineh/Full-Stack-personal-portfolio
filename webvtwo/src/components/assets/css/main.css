@@ -3610,14 +3610,38 @@ body.absolute_header .breadcrumb_area {
 /* END: Breadcrumb Area */
 
 /* Start: Modal CSS */
+.contact_modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(14, 209, 0, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  }
 
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-body {
+    padding-bottom: 20px;
+  }
+  
+  .modal-footer {
+    text-align: center;
+  }
+  
 .contact_modal .modal-content {
     border-radius: 0;
 }
 
-.contact_modal .modal-body {
-    color: green;
-}
 
 .contact_modal.failed .modal-body {
     color: red;
@@ -3629,7 +3653,7 @@ body.absolute_header .breadcrumb_area {
 
 .contact_modal .modal-footer,
 .contact_modal .modal-header {
-    background-color: var(--tj-theme-primary);
+   
     border-radius: 0;
 }
 
