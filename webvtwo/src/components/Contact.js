@@ -26,7 +26,7 @@ const ContactSection = () => {
     console.log(formData);
     
     try {
-      const response = await axios.post('mrbasketo-server.vercel.app/submit-form', formData, {
+      const response = await axios.post('https://mrbasketo-server.vercel.app/submit-form', formData, {
         headers: {
           'Content-Type': 'application/json'
         },
