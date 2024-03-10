@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactModalFail = () => {
   return (
-    <div className="modal contact_modal failed" id="message_fail" tabIndex="-1">
+    <div className="contact_modal failed" id="message_fail" style={{display:'none'}}>
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">

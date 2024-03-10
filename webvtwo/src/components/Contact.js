@@ -1,9 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaPhone } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FiMapPin } from 'react-icons/fi';
+import axios from 'axios';
+import ContactModalFail from './ContactModalFail';
+import ContactModalSuccess from './ContactModalSuccess';
 
 const ContactSection = () => {
+
+  const [formData, setFormData] = useState({
+    fname:'',
+    lname:'',
+    email:'',
+    phoneno:'',
+    service:'',
+    message:'',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async () => {
+    
+    console.log(formData);
+    
+    try {
+      const response = await axios.post('http://localhost:5000/submit-form', formData, {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      });
+
+      // Check if response is not successful
+      if (response.status !== 200) {
+        console.log('error happened')
+        const failMessage = document.querySelector('#message_fail');
+        failMessage.style.display = 'block';
+        throw new Error('Network response was not ok');
+      }
+      else
+      {
+        console.log('succesfuly')
+        const successMsg = document.querySelectorAll('#message_sent');
+        successMsg.style.display = 'block';
+      }
+  
+      // If successful, clear the form
+      setFormData({
+        fname:'',
+        lname:'',
+        email:'',
+        phoneno:'',
+        service:'',
+        message:'',
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
+
   return (
     <section className="contact-section" id="contact-section">
       <div className="container">
@@ -17,32 +73,32 @@ const ContactSection = () => {
               </div>
 
               <div className="tj-contact-form">
-                <form id="contact-form">
+                <form id="contact-form" onSubmit={handleSubmit}>
                   {/* Form input fields */}
                   <div className="row gx-3">
                     <div className="col-sm-6">
                       <div className="form_group">
-                        <input type="text" name="conName" id="conName" placeholder="First name" autoComplete="off" />
+                        <input type="text" name="fname" id="conName" placeholder="First name" autoComplete="off" value={formData.fname} onChange={handleChange} />
                       </div>
                     </div>
                     <div className="col-sm-6">
                       <div className="form_group">
-                        <input type="text" name="conLName" id="conLName" placeholder="Last name" autoComplete="off" />
+                        <input type="text" name="lname" id="conLName" placeholder="Last name" autoComplete="off" value={formData.lname} onChange={handleChange}/>
                       </div>
                     </div>
                     <div className="col-sm-6">
                       <div className="form_group">
-                        <input type="email" name="conEmail" id="conEmail" placeholder="Email address" autoComplete="off" />
+                        <input type="email" name="email" id="conEmail" placeholder="Email address" autoComplete="off" value={formData.email} onChange={handleChange}/>
                       </div>
                     </div>
                     <div className="col-sm-6">
                       <div className="form_group">
-                        <input type="tel" name="conPhone" id="conPhone" placeholder="Phone number" autoComplete="off" />
+                        <input type="tel" name="phoneno" id="conPhone" placeholder="Phone number" autoComplete="off" value={formData.phoneno} onChange={handleChange}/>
                       </div>
                     </div>
                     <div className="col-12">
                       <div className="form_group">
-                        <select name="conService" id="conService" className="tj-nice-select">
+                        <select name="service" id="conService" className="tj-nice-select" value={formData.service} onChange={handleChange}>
                           <option value="" selected disabled>Choose Service</option>
                           <option value="braning">Mobile App Development</option>
                           <option value="web">Web Development</option>
@@ -56,7 +112,7 @@ const ContactSection = () => {
                     </div>
                     <div className="col-12">
                       <div className="form_group">
-                        <textarea name="conMessage" id="conMessage" placeholder="Message"></textarea>
+                        <textarea name="message" id="conMessage" placeholder="Message" value={formData.message} onChange={handleChange} ></textarea>
                       </div>
                     </div>
                     <div className="col-12">
@@ -69,6 +125,7 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
+         
 
           {/* Contact Information Section */}
           <div className="col-lg-5 offset-lg-1 col-md-5 d-flex flex-wrap align-items-center order-1 order-md-2">
@@ -111,6 +168,9 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
+      <button onClick={handleSubmit}>submit</button>
+      <ContactModalFail/>
+      <ContactModalSuccess/>
     </section>
   );
 };

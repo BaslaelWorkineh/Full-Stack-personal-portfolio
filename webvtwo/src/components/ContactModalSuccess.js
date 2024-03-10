@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactModalSuccess = () => {
   return (
-    <div className="modal contact_modal" id="message_sent" tabIndex="-1">
+    <div className="contact_modal" id="message_sent" tabIndex="-1" style={{display:'none'}}>
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
