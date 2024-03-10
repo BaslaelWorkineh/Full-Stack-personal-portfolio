@@ -7,11 +7,6 @@ const PORT = 5000
 const app = express()
 app.use(express.json());
 app.use(cors(
-    {
-        origin: ["https://mrbasketo.vercel.app/"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
 ))
 
 mongoose.connect('mongodb+srv://baslaworku:basuismena@cluster0.r0dzflz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',{
