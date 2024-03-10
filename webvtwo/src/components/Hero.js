@@ -33,7 +33,7 @@ const HeroSection = () => {
                     <div className="md:w-6/12">
                         <div className="hero-content-box">
                             <span className="hero-sub-title">I am Baslael Workineh</span>
-                            <h1 className="hero-title">Softwar +<br />Web Developer</h1>
+                            <h1 className="hero-title">Software +<br />Web Developer</h1>
 
                             <div className="hero-image-box md:hidden text-center">
                                 <img src={profilepic} alt="" />

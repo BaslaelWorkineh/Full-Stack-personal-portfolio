@@ -10,7 +10,7 @@ root.render(
     <App />
   </React.StrictMode>
 );
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
