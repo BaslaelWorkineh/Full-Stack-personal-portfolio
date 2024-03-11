@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaPhone } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FiMapPin } from 'react-icons/fi';
@@ -9,20 +9,14 @@ import ContactModalSuccess from './ContactModalSuccess';
 const ContactSection = () => {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [showFailModal, setShowFailModal] = useState(false);
-  const [isVisible, setIsVisible] = useState()
-  onclick = ()=>{
-    setIsVisible(true);
-  }
-
-
 
   const [formData, setFormData] = useState({
-    fname:'',
-    lname:'',
-    email:'',
-    phoneno:'',
-    service:'',
-    message:'',
+    fname: '',
+    lname: '',
+    email: '',
+    phoneno: '',
+    service: '',
+    message: '',
   });
 
   const handleChange = (e) => {
@@ -30,46 +24,52 @@ const ContactSection = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     console.log(formData);
-    
-    try {
-      const response = await axios.post('https://mrbasketo-server.vercel.app/submit-form', formData, {
-        headers: {
-          'Content-Type': 'application/json'
-        },
-      });
 
-      // Check if response is not successful
+    try {
+      const response = await axios.post(
+        'https://mrbasketo-server.vercel.app/submit-form',
+        formData,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
       if (response.status !== 200) {
         setShowFailModal(true);
-        console.log('error happened')
-        const failMessage = document.querySelector('#message_fail');
-        failMessage.style.display = 'block';
+        console.log('error happened');
         throw new Error('Network response was not ok');
-      }
-      else
-      {
+      } else {
         setShowSuccessModal(true);
-        console.log('succesfuly')
-        const successMsg = document.querySelectorAll('#message_sent');
-        successMsg.style.display = 'block';
+        console.log('successful');
       }
-  
-      // If successful, clear the form
+
       setFormData({
-        fname:'',
-        lname:'',
-        email:'',
-        phoneno:'',
-        service:'',
-        message:'',
+        fname: '',
+        lname: '',
+        email: '',
+        phoneno: '',
+        service: '',
+        message: '',
       });
     } catch (error) {
       setShowFailModal(true);
       console.error('Error submitting form:', error);
     }
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSuccessModal(false);
+      setShowFailModal(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [showSuccessModal, showFailModal]);
+
 
   return (
     <section className="contact-section" id="contact-section">
@@ -181,7 +181,7 @@ const ContactSection = () => {
       </div>
       {/* Success and Fail Modals */}
       {showSuccessModal && <ContactModalSuccess />}
-      {showFailModal && <ContactModalFail isVisible={isVisible} />}
+      {showFailModal && <ContactModalFail/>}
     </section>
   );
 };
