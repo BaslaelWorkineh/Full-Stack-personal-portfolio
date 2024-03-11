@@ -26,7 +26,7 @@ const ResumeSection = () => {
                 </div>
                 <h3 className="resume-title">Intern at Prodigy Info Tech</h3>
                 <div className="institute">
-                  Parsons, The New School
+                  As ML student
                 </div>
               </div>
               <div className="resume-item wow fadeInLeft" data-wow-delay=".6s">
