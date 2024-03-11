@@ -111,7 +111,7 @@ const ContactSection = () => {
                       <div className="form_group">
                         <select name="service" id="conService" className="tj-nice-select" value={formData.service} onChange={handleChange}>
                           <option value="" selected disabled>Choose Service</option>
-                          <option value="braning">Mobile App Development</option>
+                          <option value="mobile-app">Mobile App Development</option>
                           <option value="web">Web Development</option>
                           <option value="game">Game Development</option>
                           <option value="system">System Design</option>
