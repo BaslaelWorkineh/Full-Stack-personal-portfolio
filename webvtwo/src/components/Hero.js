@@ -23,7 +23,7 @@ const HeroSection = () => {
         <section className="hero-section flex items-center" id="intro">
             <div className="intro_text">
                 <svg viewBox="0 0 1320 300">
-                    <text x="50%" Y="50%" textAnchor="middle">
+                    <text x="53%" Y="50%" textAnchor="middle">
                         BASLAEL
                     </text>
                 </svg>
@@ -32,17 +32,17 @@ const HeroSection = () => {
                 <div className="flex flex-col md:flex-row items-center">
                     <div className="md:w-6/12">
                         <div className="hero-content-box">
-                            <span className="hero-sub-title">I am Baslael Workineh</span>
-                            <h1 className="hero-title">Software +<br />Web Developer</h1>
+                            <span className="hero-sub-title wow fadeInRight" data-wow-delay='.3s'>I am Baslael Workineh</span>
+                            <h1 className="hero-title wow fadeInLeft" data-wow-delay='0.3s' >Software +<br />Web Developer</h1>
 
                             <div className="hero-image-box md:hidden text-center">
                                 <img src={profilepic} alt="" />
                             </div>
 
-                            <p className="lead">I specialize in crafting interactive software systems tailored to meet your unique needs, alongside developing dynamic and engaging websites that captivate your audience.</p>
+                            <p className="lead wow fadeInLeft" data-wow-delay='0.4s'>I specialize in crafting interactive software systems tailored to meet your unique needs, alongside developing dynamic and engaging websites that captivate your audience.</p>
                             <div className="button-box flex flex-wrap items-center">
-                                <a href='https://drive.usercontent.google.com/uc?export=download&id=1iNJQtjSPqGtYWQfP0GxdHr8YW8HOam67' className="btn tj-btn-secondary">Download CV</a>
-                                <ul className="ul-reset social-icons">
+                                <a href='https://drive.usercontent.google.com/uc?export=download&id=1iNJQtjSPqGtYWQfP0GxdHr8YW8HOam67' className="btn tj-btn-secondary wow fadeInLeft" data-wow-delay='0.3s'>Download CV</a>
+                                <ul className="ul-reset social-icons wow fadeInRight" data-wow-delay='0.3s'>
                                     <li><a href="https://www.reddit.com/user/Same-Ad8290" target='_blank'><FaReddit /></a></li>
                                     <li><a href="https://www.instagram.com/basketo_w/" target='_blank'><FaInstagram /></a></li>
                                     <li><a href="https://www.linkedin.com/in/baslael-workineh-ayele-131b11248/" target='_blank'><FaLinkedinIn /></a></li>
@@ -52,7 +52,7 @@ const HeroSection = () => {
                         </div>
                     </div>
                     <div className="md:w-6/12 hidden md:block">
-                        <div className="hero-image-box text-center">
+                        <div className="hero-image-box text-center wow fadeInUp" data-wow-delay='0.4s'>
                             <img src={profilepic} alt="" />
                         </div>
                     </div>

@@ -10,7 +10,7 @@ const Header = ({ sticky }) => {
     };
 
     return (
-        <header className={`tj-header-area header-absolute ${sticky && 'sticky-out'}`}>
+        <header className={`wow fadeInDown tj-header-area header-absolute ${sticky && 'sticky-out'}`} data-wow-delay='0.3s'>
             <div className="container">
                 <div className="row">
                     <div className="col-12 d-flex flex-wrap align-items-center">

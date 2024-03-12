@@ -2,25 +2,21 @@ import React from 'react'
 import './assets/css/loading.css'
 function Loading() {
     return (
-        <section className='theBody' style={{display:'flex', height:"100vh", width:"100vw", justifyContent:'center',alignItems:'center'}}>
-            <div aria-label="Orange and tan hamster running in a metal wheel" role="img" className="wheel-and-hamster">
-                <div className="wheel"></div>
-                <div className="hamster">
-                    <div className="hamster__body">
-                        <div className="hamster__head">
-                            <div className="hamster__ear"></div>
-                            <div className="hamster__eye"></div>
-                            <div className="hamster__nose"></div>
-                        </div>
-                        <div className="hamster__limb hamster__limb--fr"></div>
-                        <div className="hamster__limb hamster__limb--fl"></div>
-                        <div className="hamster__limb hamster__limb--br"></div>
-                        <div className="hamster__limb hamster__limb--bl"></div>
-                        <div className="hamster__tail"></div>
+        <section classNameName='theBody' style={{ display: 'flex', height: "100vh", width: "100vw", justifyContent: 'center', alignItems: 'center' }}>
+            <div className="terminal-loader">
+                <div className="terminal-header">
+                    <div className="terminal-title">Status</div>
+                    <div className="terminal-controls">
+                        <div className="control close"></div>
+                        <div className="control minimize"></div>
+                        <div className="control maximize"></div>
                     </div>
                 </div>
-                <div className="spoke"></div>
+                <div className="content">
+                    <div className="textLoading">Loading...</div>
+                </div>
             </div>
+
         </section>
 
     )
