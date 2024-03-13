@@ -24,7 +24,7 @@ const Footer = () => {
                 </ul>
               </nav>
             </div>
-            <div className="copy-text">
+            <div className="copy-text" style={{border:'none'}}>
               <p>&copy; 2024 All rights reserved by <a href="#" target="_blank" rel="noopener noreferrer">Baslael Workineh</a></p>
             </div>
           </div>

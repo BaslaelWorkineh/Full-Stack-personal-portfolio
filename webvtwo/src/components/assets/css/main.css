@@ -3071,7 +3071,11 @@ blockquote cite::before {
     -ms-transform: scaleX(1);
     transform: scaleX(1);
 }
-
+.copy-text{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 .copy-text p {
     margin-bottom: 0;
     color: var(--tj-theme-primary);
