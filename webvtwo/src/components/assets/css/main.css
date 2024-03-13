@@ -54,13 +54,15 @@
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    scrollbar-width: thin;
-    scrollbar-color: var(--tj-theme-primary) var(--tj-theme-secondary);
+   
 }
 
 ::-webkit-scrollbar {
     height: 4px;
     width: 4px;
+    scrollbar-width:thin;
+    scrollbar-color: var(--tj-theme-primary) var(--tj-theme-secondary);
+    
     background: var(--tj-theme-secondary);
 }
 
@@ -71,7 +73,6 @@
 }
 
 ::-webkit-scrollbar-corner {
-    background: transparent;
 }
 
 html,
@@ -3682,14 +3683,14 @@ body.absolute_header .breadcrumb_area {
 
 /* Handle */
 .project-Description::-webkit-scrollbar-thumb {
-    background: #ff4c4c; /* Set thumb color */
+    background: #854dff; /* Set thumb color */
     border-radius: 10px; /* Set thumb border radius */
 
 }
 
 /* Handle on hover */
 .project-Description::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Set thumb color on hover */
+    background: #6a00ff; /* Set thumb color on hover */
 }
 .project-Description-Media {
     display: grid;
