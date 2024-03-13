@@ -1052,14 +1052,13 @@ body.loaded {
     height: 100%;
     background: var(--tj-theme-secondary); /* Initial background color */
     z-index: -1;
-    transition: width 0.9s; /* Add transition for smooth width change */
+    transition: width 2s; /* Add transition for smooth width change */
 }
 
 .services-widget .service-item:hover::before {
     width: 100%; /* Expand width to create the animation */
     background: var(--tj-theme-primary);
-    background: -o-linear-gradient(190deg, var(--tj-theme-secondary) 0%, var(--tj-theme-primary) 100%);
-    background: linear-gradient(260deg, var(--tj-theme-secondary) 0%, var(--tj-theme-primary) 100%);
+   
 }
 
 
@@ -3677,13 +3676,13 @@ body.absolute_header .breadcrumb_area {
 
 /* Track */
 .project-Description::-webkit-scrollbar-track {
-    background: #434343; /* Set track background color */
+    background: #5a48699d; /* Set track background color */
     border-radius: 20px;
 }
 
 /* Handle */
 .project-Description::-webkit-scrollbar-thumb {
-    background: #854dff; /* Set thumb color */
+    background: #4200ab; /* Set thumb color */
     border-radius: 10px; /* Set thumb border radius */
 
 }

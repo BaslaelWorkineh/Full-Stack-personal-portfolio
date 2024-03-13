@@ -1,6 +1,5 @@
 // ServicesSection.js
 import React, { useState } from 'react';
-import ServicePopup from './ServicePopup';
 
 const ServicesSection = () => {
     const [activeService, setActiveService] = useState(null);
@@ -13,15 +12,6 @@ const ServicesSection = () => {
         { number: '05', title: 'Game Development', description: 'As the sole developer, my Game Development service is dedicated to bringing your unique vision to life. From conceptualization to execution, I specialize in crafting captivating games across different platforms.' },
         { number: '06', title: 'Low Poly 3D Design', description: 'In my Low Poly 3D Design service, I specialize in creating visually stunning designs with a minimalist aesthetic. Using optimized techniques, I craft captivating scenes ideal for games, animations, and virtual environments.' }
     ];
-
-    const handleServiceClick = (index) => {
-        setActiveService(index);
-    };
-    const [visible, setvisible] = useState(false);
-
-    const onClose = ()=>{
-        setvisible(false);
-    }
 
     return (
         <section className="services-section" id="services-section">
@@ -39,7 +29,7 @@ const ServicesSection = () => {
                     <div className="col-md-12">
                         <div className="services-widget position-relative">
                             {services.map((service, index) => (
-                                <div className={`service-item d-flex flex-wrap align-items-center wow fadeInUp ${activeService === index ? 'current' : ''}`} data-wow-delay={0.5 + index * 0.1 + 's'} key={index} onClick={() => {handleServiceClick(index); setvisible(true)}}>
+                                <div className={`service-item d-flex flex-wrap align-items-center wow fadeInUp ${activeService === index ? 'current' : ''}`} data-wow-delay={0.5 + index * 0.1 + 's'} key={index} >
                                     <div className="left-box d-flex flex-wrap align-items-center">
                                         <span className="number">{service.number}</span>
                                         <h3 className="service-title">{service.title}</h3>
@@ -56,7 +46,6 @@ const ServicesSection = () => {
                     </div>
                 </div>
             </div>
-            <ServicePopup visible={visible} onClose={onClose}/>
         </section>
     );
 };
