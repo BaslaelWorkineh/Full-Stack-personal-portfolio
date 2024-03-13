@@ -7,7 +7,6 @@ const ServicePopup = ({ visible, onClose }) => {
 
     return (
         <>
-
             <Model isOpen={visible} id="service-wrapper" className="popup_content_area zoom-anim-dialog fixed inset-0 overflow-y-auto" style={{ overflow: 'auto', overlay: { background: 'rgba(106, 69, 255, 0.456)', zIndex: 9999, overflowY: 'scroll' }, }}>
                 <button className="close-btn" onClick={onClose} style={{ background: 'black', padding: 20, position:'absolute' }}>
                     Close
@@ -138,7 +137,7 @@ const ServicePopup = ({ visible, onClose }) => {
                         </div>
                     </div>
 
-
+                    <div id="overlayPopUpService" onClick={onClose}></div>
                 </div>
             </Model>
         </>

@@ -5,6 +5,16 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import testimonialsData from './testimonialsData'; // Importing the false data
 
 const TestimonialSection = () => {
+
+  const responsiveOptions = {
+    0: {
+      items: 1, // Show only one item on small screens
+    },
+    768: {
+      items: 2, // Show two items on medium screens and above
+    },
+  };
+
   return (
     <section className="testimonial-section" id="testimonials-section">
       <div className="container">
@@ -24,10 +34,10 @@ const TestimonialSection = () => {
                 margin={10}
                 nav
                 dots
-                items={2}
+                responsive={responsiveOptions}
               >
                 {testimonialsData.map((testimonial, index) => (
-                  <div className="testimonial-item" key={index} style={{height:'450px'}}>
+                  <div className="testimonial-item" key={index} style={{height:'450px', width:'300px'}}>
                     <div className="top-area d-flex flex-wrap justify-content-between">
                       <div className="logo-box">
                         <img src={testimonial.logo} alt="" />

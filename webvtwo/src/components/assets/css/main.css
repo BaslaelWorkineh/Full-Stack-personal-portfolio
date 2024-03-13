@@ -1,47 +1,13 @@
-/*-----------------------------------------------------------------------------------
------------------------------------------------------------------------------------
-/************ TABLE OF CONTENTS ***************
-
-  Theme Default CSS
-	Preloader
-	Headers
-	Hero Section
-	Services Section
-	Portfolio Section
-	Popup Section
-	Resume Section
-	Skills Section
-	Testimonials Section
-	Blog Section
-	Blog Standard Page
-	Blog Details Page
-	Contact Section
-	Footer Area
-	Sidebar Menu
-	Sidebar Widgets
-	Breadcrumb Area
-
-**********************************************/
-
-/*
-* ===============================
-*  START: Theme Default CSS
-* ===============================
-*/
 
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 :root {
-    /* ----------------------------------
-   @font family declaration
-  ------------------------------------ */
+
     --tj-ff-body: "Sora", sans-serif;
     --tj-ff-heading: "Sora", sans-serif;
     --tj-ff-russo: "Russo One", sans-serif;
     --tj-ff-fontawesome: "Font Awesome 6 Pro";
-    /* ----------------------------------
-   @color declaration
-  ------------------------------------ */
+
     --tj-body: #dddddd;
     --tj-white: #ffffff;
     --tj-black: #000000;
@@ -3675,3 +3641,395 @@ body.absolute_header .breadcrumb_area {
 }
 
 /* END: Modal CSS */
+
+
+
+.project-Description {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid black;
+    border-radius: 10px;
+    z-index: 999;
+    backdrop-filter: blur(20px);
+    width: 90vw;
+    height: 90vh;
+    max-width: 80%;
+    transition: 200ms ease-in-out;
+    display: block;
+    overflow: auto;
+    overflow-x: hidden;
+    background: linear-gradient(to right, rgb(54, 0, 116), rgb(29, 0, 51));
+
+}
+
+/* Customize scrollbar */
+.project-Description::-webkit-scrollbar {
+    width: 5px; /* Set width of the scrollbar */
+    border-radius: 10px; /* Set border radius to make it round */
+}
+
+/* Track */
+.project-Description::-webkit-scrollbar-track {
+    background: #434343; /* Set track background color */
+    border-radius: 20px;
+}
+
+/* Handle */
+.project-Description::-webkit-scrollbar-thumb {
+    background: #ff4c4c; /* Set thumb color */
+    border-radius: 10px; /* Set thumb border radius */
+
+}
+
+/* Handle on hover */
+.project-Description::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Set thumb color on hover */
+}
+.project-Description-Media {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    place-items: center;
+}
+
+.project-Description-Media img {
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.project-Description-Header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+    font-family: 'Roboto', sans-serif; /* Example custom font */
+}
+
+.project-Description-Header .title {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}
+
+.project-Description-Header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Example custom font */
+    color: white;
+    right: 0;
+    top: 0;
+    margin: 20px;
+    position: absolute;
+    
+}
+
+.project-Description-body{
+    padding: 20px 15px 10px 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Example custom font */
+    font-size: 20px;
+    text-align: justify;
+    color: white
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (height:width) */
+    padding-top: 30px; /* Optional: Add some top padding to prevent content from touching the top of the container */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#overlayPopUp{
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(74, 0, 139, 0.232);
+    z-index: 20;
+    transition: 200ms ease-in-out;
+    pointer-events: all;
+    opacity: 1;
+    display: block;
+}
+
+#overlayPopUpService
+{
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(74, 0, 139, 0.232);
+    z-index: -1;
+    transition: 200ms ease-in-out;
+    pointer-events: all;
+    opacity: 1;
+    display: block;
+
+}
+.project-Description .instructions{
+    font-size: 19px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.copy-text{
+
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    color: white
+    
+}
+.copy-text input{
+     width: 100%;
+     color: black
+}
+.copy-text input.text{
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.copy-text button{
+    width: 60px;
+    height: 50px;
+    background: #5784f5;
+    color:#fff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+.copy-text button:active{
+    background: #809ce2;
+}
+
+.copy-text button:before{
+    content: "Copied";
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    background: #5c81dc;
+    padding: 8px 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    display: none;
+}
+
+.copy-text button:after{
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    width: 10px;
+    height: 10px;
+    background: #5c81dc;
+    transform:rotate(45deg);
+    display:none;
+}
+.copy-text.active button:before,
+.copy-text.active button::after{
+    display: block;
+}
+.buttonSeparator{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.closeBtn {
+    border: none;
+    border-radius: 10px;
+    width: 140px;
+    height: 50px;
+    color: #fff;
+    z-index: 1;
+    display: flex;
+    background: #2f2f2f;
+    position: relative;
+    cursor: pointer;
+}
+      
+  
+  .closeBtn p {
+    margin: 0 auto;
+    align-self: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .closeBtn::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    z-index: -1;
+    height: 10%;
+    bottom: 0;
+    clip-path: polygon(
+      0% 74%,
+      4% 75%,
+      8% 76%,
+      11% 77%,
+      15% 78%,
+      20% 78%,
+      25% 77%,
+      32% 77%,
+      37% 75%,
+      40% 74%,
+      43% 74%,
+      46% 73%,
+      52% 72%,
+      57% 72%,
+      65% 74%,
+      66% 75%,
+      71% 78%,
+      75% 82%,
+      81% 86%,
+      83% 88%,
+      88% 91%,
+      90% 94%,
+      94% 96%,
+      98% 98%,
+      100% 100%,
+      82% 100%,
+      0 100%
+    );
+    background: #8792eb;
+    transition: 0.2s ease;
+  }
+  
+  .closeBtn::before {
+    position: absolute;
+    content: "";
+    /*   bottom: 80%; */
+    transform: rotate(180deg);
+    width: 100%;
+    height: 10%;
+    transition: 0.2s ease;
+    /*   bottom:; */
+    z-index: -1;
+    clip-path: polygon(
+      0% 74%,
+      4% 75%,
+      8% 76%,
+      11% 77%,
+      15% 78%,
+      20% 78%,
+      25% 77%,
+      32% 77%,
+      37% 75%,
+      40% 74%,
+      43% 74%,
+      46% 73%,
+      52% 72%,
+      57% 72%,
+      65% 74%,
+      66% 75%,
+      71% 78%,
+      75% 82%,
+      81% 86%,
+      83% 88%,
+      88% 91%,
+      90% 94%,
+      94% 96%,
+      98% 98%,
+      100% 100%,
+      82% 100%,
+      0 100%
+    );
+    background: #8792eb;
+  }
+  
+  .closeBtn:hover::after {
+    clip-path: polygon(
+      0 30%,
+      9% 34%,
+      7% 39%,
+      11% 43%,
+      13% 33%,
+      17% 30%,
+      24% 34%,
+      25% 35%,
+      30% 31%,
+      30% 38%,
+      39% 33%,
+      35% 43%,
+      43% 45%,
+      55% 46%,
+      65% 74%,
+      67% 66%,
+      81% 57%,
+      75% 82%,
+      81% 86%,
+      83% 88%,
+      88% 91%,
+      90% 94%,
+      94% 96%,
+      98% 98%,
+      100% 100%,
+      82% 100%,
+      0 100%
+    );
+    height: 80%;
+  }
+  
+  .closeBtn:hover::before {
+    clip-path: polygon(
+      0 30%,
+      9% 34%,
+      7% 39%,
+      11% 43%,
+      13% 33%,
+      17% 30%,
+      24% 34%,
+      25% 35%,
+      30% 31%,
+      30% 38%,
+      39% 33%,
+      35% 43%,
+      43% 45%,
+      55% 46%,
+      65% 74%,
+      67% 66%,
+      81% 57%,
+      75% 82%,
+      81% 86%,
+      83% 88%,
+      88% 91%,
+      90% 94%,
+      94% 96%,
+      98% 98%,
+      100% 100%,
+      82% 100%,
+      0 100%
+    );
+    height: 80%;
+  }
+  
