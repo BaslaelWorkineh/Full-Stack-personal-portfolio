@@ -555,6 +555,7 @@
     }
     .hero-image-box img {
         max-width: 80%;
+        height: 300px;
     }
     .hero-content-box .button-box {
         margin-top: 20px;
