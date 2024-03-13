@@ -41,7 +41,9 @@ const HeroSection = () => {
 
                             <p className="lead wow fadeInLeft" data-wow-delay='0.4s'>I specialize in crafting interactive software systems tailored to meet your unique needs, alongside developing dynamic and engaging websites that captivate your audience.</p>
                             <div className="button-box flex flex-wrap items-center">
-                                <a href='https://drive.usercontent.google.com/uc?export=download&id=1iNJQtjSPqGtYWQfP0GxdHr8YW8HOam67' className="btn tj-btn-secondary wow fadeInLeft" data-wow-delay='0.3s'>Download CV</a>
+                                <a href='https://drive.usercontent.google.com/uc?export=download&id=1iNJQtjSPqGtYWQfP0GxdHr8YW8HOam67' className="btn-17 wow fadeInLeft" data-wow-delay='0.3s' style={{textDecoration:'none'}}> <span className="text-container">
+                                    <span className="text">Download CV</span>
+                                </span></a>
                                 <ul className="ul-reset social-icons wow fadeInRight" data-wow-delay='0.3s'>
                                     <li><a href="https://www.reddit.com/user/Same-Ad8290" target='_blank'><FaReddit /></a></li>
                                     <li><a href="https://www.instagram.com/basketo_w/" target='_blank'><FaInstagram /></a></li>
