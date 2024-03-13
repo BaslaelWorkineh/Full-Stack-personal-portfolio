@@ -253,10 +253,10 @@ a h6:hover {
 }
 
 .social-icons li a {
-    color: var(--tj-theme-primary);
+    color: white;
     width: 35px;
     height: 35px;
-    border: 1px solid var(--tj-theme-primary);
+    border: 1px solid white;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -277,7 +277,7 @@ a h6:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--tj-theme-primary);
+    background: white;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
@@ -290,7 +290,7 @@ a h6:hover {
 
 .social-icons li a:hover {
     border: 1px solid var(--tj-theme-primary);
-    color: var(--tj-white);
+    color: black;
 }
 
 .social-icons li a:hover::before {
