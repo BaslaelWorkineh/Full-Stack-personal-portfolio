@@ -3764,7 +3764,7 @@ body.absolute_header .breadcrumb_area {
 
 .closeBtn {
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 140px;
     height: 50px;
     color: #fff;
@@ -3791,6 +3791,7 @@ body.absolute_header .breadcrumb_area {
     z-index: -1;
     height: 10%;
     bottom: 0;
+    border-radius: 5px;
     clip-path: polygon(
       0% 74%,
       4% 75%,
@@ -3820,16 +3821,17 @@ body.absolute_header .breadcrumb_area {
       82% 100%,
       0 100%
     );
-    background: #8792eb;
+    background: #b187eb;
     transition: 0.2s ease;
   }
   
   .closeBtn::before {
+    border-radius: 5px;
     position: absolute;
     content: "";
     /*   bottom: 80%; */
     transform: rotate(180deg);
-    width: 100%;
+    width: 99%;
     height: 10%;
     transition: 0.2s ease;
     /*   bottom:; */
@@ -3863,7 +3865,7 @@ body.absolute_header .breadcrumb_area {
       82% 100%,
       0 100%
     );
-    background: #8792eb;
+    background: #a587eb;
   }
   
   .closeBtn:hover::after {
