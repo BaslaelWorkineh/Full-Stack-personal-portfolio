@@ -27,8 +27,7 @@ function Home() {
     
   return (
     <div>
-      <Header sticky={false} />
-      <Header sticky={true} />
+      <Header />
       <HeroSection />
       <ServicesSection />
       <PortfolioSection />

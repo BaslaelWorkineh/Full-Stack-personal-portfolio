@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import logo from './assets/img/logo/logo.png';
 
 
-const Header = ({ sticky }) => {
+const Header = () => {
     const [menuOpened, setMenuOpened] = useState(false);
-
+  
     const toggleMenu = () => {
         setMenuOpened(!menuOpened);
     };
 
     return (
-        <header className={`wow fadeInDown tj-header-area header-absolute ${sticky && 'sticky-out'}`} data-wow-delay='0.3s'>
+        <header className={`wow fadeInDown tj-header-area header-absolute`} data-wow-delay='0.3s'>
             <div className="container">
                 <div className="row">
                     <div className="col-12 d-flex flex-wrap align-items-center">
