@@ -41,7 +41,9 @@ const Header = () => {
                         </div>
 
                         <div className="header-button">
-                            <a href="https://www.linkedin.com/in/baslael-workineh-ayele-131b11248/" className="btn tj-btn-primary" target='_blank'>Hire me!</a>
+                            <a href="https://www.linkedin.com/in/baslael-workineh-ayele-131b11248/" className="btn-17" target='_blank' style={{textDecoration:'none'}}><span className="text-container">
+                                    <span className="text">Hire Me</span>
+                                </span></a>
                         </div>
 
                         <div className="menu-bar lg:hidden" onClick={toggleMenu}>
