@@ -3556,13 +3556,19 @@ body.absolute_header .breadcrumb_area {
     backdrop-filter: blur(20px);
     width: 90vw;
     height: 90vh;
-    max-width: 80%;
     transition: 200ms ease-in-out;
     display: block;
     overflow: auto;
     overflow-x: hidden;
-    background: linear-gradient(to right, rgb(54, 0, 116), rgb(29, 0, 51));
+    background: linear-gradient(to right, rgba(54, 0, 116, 0.5), rgb(29, 0, 51,0.5));
 
+}
+
+@media screen and (max-width: 530px) {
+    .project-Description {
+        width: 100vw;
+        height:100vh,
+    }
 }
 
 /* Customize scrollbar */
@@ -3598,6 +3604,7 @@ body.absolute_header .breadcrumb_area {
     height: auto;
     border-radius: 10px;
     padding: 10px;
+    
 }
 
 .project-Description-Header {
@@ -3620,7 +3627,10 @@ body.absolute_header .breadcrumb_area {
     cursor: pointer;
     border: none;
     outline: none;
-    background: none;
+    background: black;
+    padding-left: 20px;
+    padding-right:20px;
+    border-radius: 5px;
     font-size: 2rem;
     font-weight: bold;
     font-family: 'Roboto', sans-serif; /* Example custom font */
