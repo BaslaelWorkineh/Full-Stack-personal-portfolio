@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import profilepic from './assets/img/hero/user.png'
 import Odometer from 'odometer';
 import { FaInstagram, FaReddit, FaLinkedinIn, FaGithub } from 'react-icons/fa';
-
+import ThreeD from './threeD';
 
 const HeroSection = () => {
 
@@ -36,7 +36,7 @@ const HeroSection = () => {
                             <h1 className="hero-title wow fadeInLeft" data-wow-delay='0.3s' >Software +<br />Web Developer</h1>
 
                             <div className="hero-image-box md:hidden text-center">
-                                <img src={profilepic} alt="" />
+                                <ThreeD/>
                             </div>
 
                             <p className="lead wow fadeInLeft" data-wow-delay='0.4s'>I specialize in crafting interactive software systems tailored to meet your unique needs, alongside developing dynamic and engaging websites that captivate your audience.</p>
@@ -55,7 +55,7 @@ const HeroSection = () => {
                     </div>
                     <div className="md:w-6/12 hidden md:block">
                         <div className="hero-image-box text-center wow fadeInUp" data-wow-delay='0.4s'>
-                            <img src={profilepic} alt="" />
+                        <ThreeD/>
                         </div>
                     </div>
                 </div>
