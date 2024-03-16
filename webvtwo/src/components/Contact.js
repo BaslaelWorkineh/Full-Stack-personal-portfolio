@@ -3,12 +3,34 @@ import { FaPhone } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FiMapPin } from 'react-icons/fi';
 import axios from 'axios';
-import ContactModalFail from './ContactModalFail';
-import ContactModalSuccess from './ContactModalSuccess';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactSection = () => {
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [showFailModal, setShowFailModal] = useState(false);
+
+  const notifySuccess = () => toast.success("Message Sent Successfully!", {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark"
+  });
+
+  const notifyFail = () => toast.error("Oops! Something went wrong, please try again!", {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    
+
+  });
 
   const [formData, setFormData] = useState({
     fname: '',
@@ -39,11 +61,11 @@ const ContactSection = () => {
       );
 
       if (response.status !== 200) {
-        setShowFailModal(true);
+        notifyFail()
         console.log('error happened');
         throw new Error('Network response was not ok');
       } else {
-        setShowSuccessModal(true);
+        notifySuccess()
         console.log('successful');
       }
 
@@ -56,19 +78,10 @@ const ContactSection = () => {
         message: '',
       });
     } catch (error) {
-      setShowFailModal(true);
+      notifyFail()
       console.error('Error submitting form:', error);
     }
   };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSuccessModal(false);
-      setShowFailModal(false);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, [showSuccessModal, showFailModal]);
 
 
   return (
@@ -94,17 +107,17 @@ const ContactSection = () => {
                     </div>
                     <div className="col-sm-6">
                       <div className="form_group">
-                        <input type="text" name="lname" id="conLName" placeholder="Last name" autoComplete="off" value={formData.lname} onChange={handleChange}/>
+                        <input type="text" name="lname" id="conLName" placeholder="Last name" autoComplete="off" value={formData.lname} onChange={handleChange} />
                       </div>
                     </div>
                     <div className="col-sm-6">
                       <div className="form_group">
-                        <input type="email" name="email" id="conEmail" placeholder="Email address" autoComplete="off" value={formData.email} onChange={handleChange}/>
+                        <input type="email" name="email" id="conEmail" placeholder="Email address" autoComplete="off" value={formData.email} onChange={handleChange} />
                       </div>
                     </div>
                     <div className="col-sm-6">
                       <div className="form_group">
-                        <input type="tel" name="phoneno" id="conPhone" placeholder="Phone number" autoComplete="off" value={formData.phoneno} onChange={handleChange}/>
+                        <input type="tel" name="phoneno" id="conPhone" placeholder="Phone number" autoComplete="off" value={formData.phoneno} onChange={handleChange} />
                       </div>
                     </div>
                     <div className="col-12">
@@ -136,16 +149,16 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-         
+
 
           {/* Contact Information Section */}
           <div className="col-lg-5 offset-lg-1 col-md-5 d-flex flex-wrap align-items-center order-1 order-md-2">
             <div className="contact-info-list">
               <ul className="ul-reset">
                 {/* Phone */}
-                <li className="d-flex flex-wrap align-items-center position-relative wow fadeInRight"  data-wow-delay=".4s">
+                <li className="d-flex flex-wrap align-items-center position-relative wow fadeInRight" data-wow-delay=".4s">
                   <div className="icon-box align-items-center">
-                    <FaPhone style={{margin:15}} />
+                    <FaPhone style={{ margin: 15 }} />
                   </div>
                   <div className="text-box">
                     <p>Phone</p>
@@ -156,7 +169,7 @@ const ContactSection = () => {
                 {/* Email */}
                 <li className="d-flex flex-wrap align-items-center position-relative wow fadeInRight" data-wow-delay=".5s">
                   <div className="icon-box">
-                    <MdEmail style={{margin:15}}/>
+                    <MdEmail style={{ margin: 15 }} />
                   </div>
                   <div className="text-box">
                     <p>Email</p>
@@ -167,7 +180,7 @@ const ContactSection = () => {
                 {/* Address */}
                 <li className="d-flex flex-wrap align-items-center position-relative wow fadeInRight" data-wow-delay=".6s">
                   <div className="icon-box">
-                    <FiMapPin style={{margin:15}}/>
+                    <FiMapPin style={{ margin: 15 }} />
                   </div>
                   <div className="text-box">
                     <p>Address</p>
@@ -179,9 +192,17 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-      {/* Success and Fail Modals */}
-      {showSuccessModal && <ContactModalSuccess />}
-      {showFailModal && <ContactModalFail/>}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"/>
     </section>
   );
 };
