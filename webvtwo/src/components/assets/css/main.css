@@ -1777,7 +1777,7 @@ a h6:hover {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid;
-    font-family: 'Roboto', sans-serif; /* Example custom font */
+    font-family: 'Rubik', sans-serif; /* Example custom font */
 }
 
 .project-Description-Header .title {
@@ -1797,7 +1797,7 @@ a h6:hover {
     border-radius: 5px;
     font-size: 2rem;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif; /* Example custom font */
+    font-family: 'Rubik', sans-serif; /* Example custom font */
     color: white;
     right: 0;
     top: 0;
@@ -1808,7 +1808,7 @@ a h6:hover {
 
 .project-Description-body{
     padding: 20px 15px 10px 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Example custom font */
+    font-family: 'Space Mono', monospace; /* Example custom font */
     font-size: 20px;
     text-align: justify;
     color: white
