@@ -10,7 +10,7 @@ function Blog() {
   useEffect(() => {
     const fetchBlogData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/blog/${name}`);
+        const response = await axios.get(`https://mrbasketo-server.vercel.app/blog/${name}`);
         setBlogData(response.data);
       } catch (error) {
         console.error('Error fetching blog data:', error);
