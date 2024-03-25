@@ -41,19 +41,19 @@ const BlogSection = () => {
             <div key={index} className="col-lg-4 col-md-6">
               <div className="blog-item wow fadeInUp" data-wow-delay={0.5 + index * 0.1 + 's'}>
                 <div className="blog-thumb">
-                  <a href="blog-details.html">
+                  <a href={`/blog/${item.title}`}>
                     <img src={item.image} alt="" style={{height:300}}/>
                   </a>
-                  <a href="#" className="category">{item.category}</a>
+                  <a href="/blog" className="category">{item.category}</a>
                 </div>
                 <div className="blog-content">
                   <div className="blog-meta">
                     <ul className="ul-reset">
                       <li><i className="fa-light fa-calendar-days"></i> {item.date}</li>
-                      <li><i className="fa-light fa-comments"></i> <a href="#">Comment ({item.comments})</a></li>
+                      <li><i className="fa-light fa-comments"></i> <a href={`/blog/${item.title}`}>Comment ({item.comments})</a></li>
                     </ul>
                   </div>
-                  <h3 className="blog-title"><a href="blog-details.html">{item.title}</a></h3>
+                  <h3 className="blog-title"><a href={`/blog/${item.title}`}>{item.title}</a></h3>
                 </div>
               </div>
             </div>

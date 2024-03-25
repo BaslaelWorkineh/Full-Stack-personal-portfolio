@@ -6,7 +6,7 @@ import PortfolioSection from '../components/Portfolio';
 import Resume from '../components/Resume';
 import SkillsSection from '../components/Skills';
 import TestimonialSection from '../components/Testimonials';
-import BlogSection from '../components/Blog';
+import BlogSection from '../components/BlogSection';
 import ContactSection from '../components/Contact';
 import Footer from '../components/Footer';
 import WOW from 'wowjs';
