@@ -3,13 +3,15 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const User = require('./models/contactModel')
 const PORT = 5000
+require('dotenv').config();
+const blogRoutes = require('./routes/blogRoute');
 
 const app = express()
 app.use(express.json());
 app.use(cors(
 ))
 
-mongoose.connect('mongodb+srv://baslaworku:basuismena@cluster0.r0dzflz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',{
+mongoose.connect(process.env.MONGODB_URI,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -21,6 +23,7 @@ db.once('open', ()=>{
     console.log('Mongodb connected successfully')
 })
 
+app.use('/', blogRoutes);
 app.get('/', (req, res)=>{
     res.json('Server is Running')
 })
