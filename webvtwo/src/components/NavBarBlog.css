@@ -1,0 +1,54 @@
+/* NavBar.css */
+
+.navbarC {
+    position: fixed; /* Position the navbar fixed */
+    top: 0; /* Position it at the top of the viewport */
+    left: 0; /* Align it to the left edge of the viewport */
+    width: 100%; /* Occupy the full width of the viewport */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background */
+    color: #fff;
+    padding-top:10px;
+    backdrop-filter: blur(10px); /* Apply backdrop filter for blur effect */
+    z-index: 10;
+}
+
+.navbarC .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navbarC .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbarC .nav-links li {
+    margin-right: 20px;
+}
+
+.navbarC .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative; /* Required for stacking context */
+}
+
+.navbarC .nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0; /* Align to the left edge of the text */
+    bottom: -2px; /* Align just below the text */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: #7b00ff;
+    transition: width 0.3s ease;
+    border-radius: 50px;
+}
+
+
+.navbarC .nav-links li a:hover::after {
+    width: 100%; /* Expand underline from left to right */
+}

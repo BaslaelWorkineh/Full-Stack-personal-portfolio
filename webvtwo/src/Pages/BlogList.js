@@ -5,6 +5,7 @@ import { Header } from '../components/ScrollupandHeader';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import image1 from '../components/assets/img/portfolio/blogcode.png'
+import NavBar from '../components/NavBarBlog';
 
 
 function HeroCarousel() {
@@ -33,7 +34,7 @@ function HeroCarousel() {
 function BlogList({ blogPosts }) {
   return (
     <div className='blog'>
-      <Header />
+      <NavBar/>
       <div style={{background:'gray', height:'50vh'}}>
       <HeroCarousel />
       </div>
