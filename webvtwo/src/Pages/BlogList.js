@@ -37,7 +37,11 @@ function BlogList({ blogPosts }) {
       <div style={{background:'gray', height:'50vh'}}>
       <HeroCarousel />
       </div>
+
       <div className="blog-list">
+        <h1 style={{display:'flex',alignItems:'center',justifyContent:'center', width:'100%'}}>
+          Discover Hidden Gems
+        </h1>
         <div className="blog-grid">
           {blogPosts.map((post) => (
             <BlogCard key={post.id} {...post} />
