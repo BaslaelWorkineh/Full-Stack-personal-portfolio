@@ -34,7 +34,7 @@ function Home() {
       <Resume />
       <SkillsSection />
       <TestimonialSection/>
-      <BlogSection />
+      {/* <BlogSection /> */}
       <ContactSection />
       <Footer />
       
