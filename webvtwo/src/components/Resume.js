@@ -15,7 +15,7 @@ const ResumeSection = () => {
                 <div className="time">
                   2024 - Present
                 </div>
-                <h3 className="resume-title">Co-Founder and CTO of Guzo Travel</h3>
+                <h3 className="resume-title">Co-Founder HabeanTech Solutions</h3>
                 <div className="institute">
                   Addis Ababa, Ethiopia
                 </div>
@@ -24,7 +24,7 @@ const ResumeSection = () => {
                 <div className="time">
                   2024 - Present
                 </div>
-                <h3 className="resume-title">Intern at iCog Labs as ML Intern</h3>
+                <h3 className="resume-title">Full-Time at iCog Labs as Software developer</h3>
                 <div className="institute">
                   2024 - Present
                 </div>
@@ -34,15 +34,6 @@ const ResumeSection = () => {
                   2021 - 2022
                 </div>
                 <h3 className="resume-title">Data Organizer at Jarso AI</h3>
-                <div className="institute">
-                  Addis Ababa, Ethiopia
-                </div>
-              </div>
-              <div className="resume-item wow fadeInLeft" data-wow-delay=".6s">
-                <div className="time">
-                  2023 - Present
-                </div>
-                <h3 className="resume-title">Freelancer at Upwork</h3>
                 <div className="institute">
                   Addis Ababa, Ethiopia
                 </div>
@@ -71,25 +62,16 @@ const ResumeSection = () => {
                 </div>
                 <h3 className="resume-title">St. Joseph Catholic School Adama</h3>
                 <div className="institute">
-                  Adama, Ethiopia
-                </div>
-              </div>
-              <div className="resume-item wow fadeInRight" data-wow-delay=".7s">
-                <div className="time">
-                  2023 - Present
-                </div>
-                <h3 className="resume-title">CS50 Courses</h3>
-                <div className="institute">
-                  Harvard University
+                  Adama, Ethiopia 
                 </div>
               </div>
               <div className="resume-item wow fadeInRight" data-wow-delay=".8s">
                 <div className="time">
                   2022 - Present
                 </div>
-                <h3 className="resume-title">Multiple Courses on Udemy</h3>
+                <h3 className="resume-title">Multiple ML Courses on Courcera</h3>
                 <div className="institute">
-                  Udemy
+                  Coursera
                 </div>
               </div>
             </div>
