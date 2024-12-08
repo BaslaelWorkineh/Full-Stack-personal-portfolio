@@ -8,7 +8,7 @@ const testimonialsData = [
   }
   ,
   {
-    logo: "https://media.licdn.com/dms/image/C4E03AQEDYJ996YZkgg/profile-displayphoto-shrink_200_200/0/1648205592782?e=1715212800&v=beta&t=ou5ZfpRTqF6o8eGhH0_kZJ11Qwx04L42hx1fCaMlOrQ",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQHeEjcWSFifWw/company-logo_100_100/company-logo_100_100/0/1722195770595?e=1741824000&v=beta&t=S83drTJKNWtuhMOgHjDezmXqjYsYkNQ2R1e8Jhy8XfI",
     userImage: "https://media.licdn.com/dms/image/v2/D4E0BAQHeEjcWSFifWw/company-logo_100_100/company-logo_100_100/0/1722195770595?e=1741824000&v=beta&t=S83drTJKNWtuhMOgHjDezmXqjYsYkNQ2R1e8Jhy8XfI",
     quote: 'I am very pleased with Baslael\'s. work as data organizer. He did his job perfectly!',
     name: 'Misgana Workineh',
