@@ -120,7 +120,7 @@ const PortfolioSection = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="section-header text-center">
-              <h2 className="section-title wow fadeInUp" data-wow-delay=".3s">My Old Works (Didn't have time to edit)</h2>
+              <h2 className="section-title wow fadeInUp" data-wow-delay=".3s">My Old Works (Will be updated soon)</h2>
               <p className="wow fadeInUp" data-wow-delay=".4s">This are some of old projects I have worked on Check'em out.</p>
             </div>
           </div>
