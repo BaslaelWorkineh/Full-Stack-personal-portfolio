@@ -41,7 +41,7 @@ const HeroSection = () => {
 
                             <p className="lead wow fadeInLeft" data-wow-delay='0.4s'>I specialize in crafting interactive software systems tailored to meet your unique needs, alongside developing dynamic and engaging websites that captivate your audience.</p>
                             <div className="button-box flex flex-wrap items-center">
-                                <a href='https://drive.google.com/file/d/17hHp91rUWTGPJrcpMbfcBhOnCxJkMtdX/view?usp=sharing' className="btn-17 wow fadeInLeft" data-wow-delay='0.3s' style={{textDecoration:'none'}}> <span className="text-container">
+                                <a href='https://drive.google.com/file/d/1PPsUcmo57hOG10m6qIHebpHEL4EAUhKa/view?usp=sharing' className="btn-17 wow fadeInLeft" data-wow-delay='0.3s' style={{textDecoration:'none'}}> <span className="text-container">
                                     <span className="text">Download CV</span>
                                 </span></a>
                                 <ul className="ul-reset social-icons wow fadeInRight" data-wow-delay='0.3s'>
@@ -64,13 +64,13 @@ const HeroSection = () => {
                     <div className="flex flex-wrap">
                         <div className="w-full md:w-1/2 lg:w-1/4">
                             <div className="funfact-item flex flex-col md:flex-row items-center">
-                                <div className="number"><span className="odometer" data-count="14">500+</span></div>
-                                <div className="text">Linkedin <br />Connections</div>
+                                <div className="number"><span className="odometer" data-count="14">1500+</span></div>
+                                <div className="text">Linkedin <br />Followers</div>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/4">
                             <div className="funfact-item flex flex-col md:flex-row items-center">
-                                <div className="number"><span className="odometer" data-count="50">40</span>+</div>
+                                <div className="number"><span className="odometer" data-count="50">10</span>+</div>
                                 <div className="text">Project <br />Completed</div>
                             </div>
                         </div>
