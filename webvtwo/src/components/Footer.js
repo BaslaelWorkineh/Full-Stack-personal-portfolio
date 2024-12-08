@@ -25,7 +25,7 @@ const Footer = () => {
               </nav>
             </div>
             <div className="copy-text" style={{border:'none'}}>
-              <p>&copy; 2024 All rights reserved by <a href="#" target="_blank" rel="noopener noreferrer">Baslael Workineh</a></p>
+              <p>&copy; 2024 Design taken from <a href="#" target="_blank" rel="noopener noreferrer">Online sources</a></p>
             </div>
           </div>
         </div>
